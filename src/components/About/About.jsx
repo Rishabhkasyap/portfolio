@@ -1,9 +1,4 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import ReactTypingEffect from 'react-typing-effect';
-import Tilt from 'react-parallax-tilt';
-import profileImage from '../../assets/dp.png';
-=======
 import Tilt from 'react-parallax-tilt';
 import BlurBlob from '../../BlurBlob';
 
@@ -13,7 +8,6 @@ const TYPE_SPEED = 90;
 const ERASE_SPEED = 45;
 const HOLD_DELAY = 1800;
 const PAUSE_BETWEEN = 400;
->>>>>>> 120b535 (re design portfolio)
 
 const usePrefersReducedMotion = () => {
   const [prefersReduced, setPrefersReduced] = useState(false);
@@ -23,14 +17,8 @@ const usePrefersReducedMotion = () => {
     const handler = () => setPrefersReduced(mq.matches);
 
     setPrefersReduced(mq.matches);
-<<<<<<< HEAD
 
-    mq.addEventListener
-      ? mq.addEventListener('change', handler)
-      : mq.addListener(handler);
-=======
     mq.addEventListener ? mq.addEventListener('change', handler) : mq.addListener(handler);
->>>>>>> 120b535 (re design portfolio)
 
     return () =>
       mq.removeEventListener
@@ -41,10 +29,7 @@ const usePrefersReducedMotion = () => {
   return prefersReduced;
 };
 
-<<<<<<< HEAD
-const About = () => {
-  const prefersReducedMotion = usePrefersReducedMotion();
-=======
+
 /** Self-contained typewriter — replaces react-typing-effect so we control
  *  the accessibility story directly (see sr-only fallback in the markup). */
 const useTypewriter = (words, enabled) => {
@@ -106,82 +91,11 @@ const About = () => {
       ? 'opacity-100'
       : `transition-all duration-700 ${delay} ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`;
->>>>>>> 120b535 (re design portfolio)
 
   return (
     <section
       id="about"
       aria-label="About me"
-<<<<<<< HEAD
-      className="py-12 px-8 lg:px-32 font-sans "
-    >
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
-        {/* Left Content */}
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-2">
-            Hi, I am
-          </h1>
-          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-4">
-            Rishabh Kumar
-          </h2>
-          <h3 className="text-2xl lg:text-3xl font-semibold text-[#8245ec] mb-6">
-            <span className="text-white">I am a </span>
-            {prefersReducedMotion ? (
-              <span className="text-[#8245ec]">Fullstack Developer</span>
-            ) : (
-              <ReactTypingEffect
-                text={[
-                  'Fullstack Developer',
-                  'App Developer',
-                  'UI/UX Designer',
-                  'Coder',
-                ]}
-                speed={100}
-                eraseSpeed={50}
-                typingDelay={500}
-                eraseDelay={2000}
-                cursorRenderer={(cursor) => (
-                  <span className="text-[#8245ec]" aria-hidden>
-                    {cursor}
-                  </span>
-                )}
-              />
-            )}
-          </h3>
-          <p className="text-gray-400 text-base lg:text-lg leading-relaxed mb-6">
-            I am a full-stack developer with 2+ years of experience building scalable web applications. Skilled in both front-end and back-end development, I specialize in the MERN stack and modern technologies to deliver seamless user experiences.
-          </p>
-          <a
-            href="https://drive.google.com/file/d/1-i65Z9EdDg2GSuEOEKXwZp2LWi_bEeoT/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-r from-[#8245ec] to-[#a855f7] text-white py-3 px-8 rounded-full font-bold text-lg shadow-[0_0_20px_rgba(130,69,236,0.5)] transition-transform transform hover:scale-105"
-            aria-label="Download CV (opens in a new tab)"
-          >
-            DOWNLOAD CV
-          </a>
-        </div>
-
-        {/* Right Image */}
-        <div className="lg:w-1/2 flex justify-center lg:justify-end">
-          <Tilt
-            className="w-64 h-64 lg:w-[28rem] lg:h-[28rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={15}
-            tiltMaxAngleY={15}
-            scale={1.05}
-            transitionSpeed={800}
-            gyroscope
-            tiltEnable={!prefersReducedMotion}
-          >
-            <img
-              src={profileImage}
-              alt="Rishabh Kumar — profile photo"
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full rounded-full object-cover shadow-lg"
-            />
-          </Tilt>
-=======
       className="relative scroll-mt-24 overflow-hidden bg-void px-6 pb-16 pt-28 font-sans lg:px-24 lg:pb-24 lg:pt-36"
     >
       {/* Ambient backdrop: faint radial wash, grounds the section without competing with the halo */}
@@ -279,15 +193,12 @@ const About = () => {
 
             </Tilt>
           </div>
->>>>>>> 120b535 (re design portfolio)
+
         </div>
       </div>
     </section>
   );
 };
 
-<<<<<<< HEAD
+
 export default About;
-=======
-export default About;
->>>>>>> 120b535 (re design portfolio)
